@@ -1,0 +1,24 @@
+{
+	"name": "tacocat",
+	"version": "2.1.5",
+	"description": "The only palindromic web components library",
+	"main": "tacocat.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"tacocat-spelled-backwards-is-tacocat",
+		"web",
+		"components",
+		"reusable",
+		"fast",
+		"client-side",
+		"palindrome",
+		"tacocat",
+		"webcomponents",
+		"website",
+		"this-package-has-too-many-tags"
+	],
+	"author": "munchkinhalfling <munchkinhalfling@pm.me>",
+	"license": "GPL-3.0"
+}
