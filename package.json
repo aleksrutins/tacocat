@@ -20,5 +20,6 @@
 		"this-package-has-too-many-tags"
 	],
 	"author": "munchkinhalfling <munchkinhalfling@pm.me>",
-	"license": "GPL-3.0"
+	"license": "GPL-3.0",
+	"types": "tacocat.d.ts"
 }
