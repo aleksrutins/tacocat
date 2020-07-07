@@ -17,8 +17,8 @@ declare module "tacocat" {
         text: (text: string) => Text
     }
 
-    export class Component {
-        constructor(options: object);
+    export class Component<TOptions = Partial<TagOptions<HTMLElement>>> {
+        constructor(options: TOptions);
         componentCreated(): void;
         render(renderUtils: RenderUtilities): Component | Node | Node[];
         private _getNode(): TacocatComponent;
