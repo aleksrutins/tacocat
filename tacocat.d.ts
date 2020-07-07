@@ -7,7 +7,8 @@ declare module "tacocat/webcomponent" {
 declare module "tacocat" {
     import {TacocatComponent} from 'tacocat/webcomponent';
     export interface TagOptions extends HTMLElement {
-
+        children: (Component | Node)[];
+        style: CSSStyleDeclaration?;
     }
     export type RenderUtilities = {
         tag: (name: string, options: TagOptions) => HTMLElement;
