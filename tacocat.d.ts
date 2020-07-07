@@ -23,7 +23,8 @@ declare module "tacocat" {
         render(renderUtils: RenderUtilities): Component | Node | Node[];
         private _getNode(): TacocatComponent;
         rerender(): void;
-        protected htmlElement: TacocatComponent
+        protected htmlElement: TacocatComponent;
+        protected options: TOptions;
     }
     export function render(comp: Component, target: HTMLElement): void;
 }
