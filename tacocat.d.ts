@@ -11,6 +11,7 @@ declare module "tacocat" {
         style: Partial<CSSStyleDeclaration>;
         cssClasses: string[];
         onCreated: (elem: TTag) => void;
+        attributes: string[string];
     }
     export type RenderUtilities = {
         tag: <T extends HTMLElement>(name: string, options: Partial<TagOptions<T>>) => HTMLElement;
