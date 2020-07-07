@@ -24,7 +24,7 @@ declare module "tacocat" {
         private _getNode(): TacocatComponent;
         rerender(): void;
         protected htmlElement: TacocatComponent;
-        protected options: TOptions;
+        protected options: Partial<TOptions>;
     }
     export function render(comp: Component, target: HTMLElement): void;
 }
