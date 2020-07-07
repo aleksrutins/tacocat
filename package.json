@@ -1,6 +1,6 @@
 {
 	"name": "tacocat",
-	"version": "2.3.8",
+	"version": "2.3.9",
 	"description": "The only palindromic web components library",
 	"main": "tacocat.js",
 	"scripts": {
