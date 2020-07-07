@@ -19,7 +19,7 @@ declare module "tacocat" {
         render(renderUtils: RenderUtilities): Component | Node | Node[];
         private _getNode(): TacocatComponent;
         rerender(): void;
-        private htmlElement: TacocatComponent
+        protected htmlElement: TacocatComponent
     }
     export function render(comp: Component, target: HTMLElement): void;
 }
