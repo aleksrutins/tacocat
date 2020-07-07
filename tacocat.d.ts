@@ -6,17 +6,17 @@ declare module "tacocat/webcomponent" {
 }
 declare module "tacocat" {
     import {TacocatComponent} from 'tacocat/webcomponent';
-    export interface TagOptions<TTag> extends HTMLElement {
+    export interface TagOptions<TTag> extends Partial<HTMLElement> {
         children: (Component | Node)[];
         style: Partial<CSSStyleDeclaration>;
         cssClasses: string[];
         onCreated: (elem: TTag) => void;
     }
     export type RenderUtilities = {
-        tag: <T extends HTMLElement>(name: string, options: TagOptions<T>) => HTMLElement;
+        tag: <T extends HTMLElement>(name: string, options: Partial<TagOptions<T>>) => HTMLElement;
         text: (text: string) => Text
     }
-    
+
     export class Component {
         constructor(options: object);
         componentCreated(): void;
