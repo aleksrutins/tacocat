@@ -26,5 +26,5 @@ declare module "tacocat" {
         protected htmlElement: TacocatComponent;
         protected options: Partial<TOptions>;
     }
-    export function render(comp: Component, target: HTMLElement): void;
+    export function render(comp: Component, target: Node): void;
 }
