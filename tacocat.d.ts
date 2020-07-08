@@ -16,7 +16,7 @@ declare module "tacocat" {
         };
         id: string;
     }
-    export interface ComponentOptions extends Partial<TagOptions<any>> {
+    export interface ComponentOptions {
         id?: string;
     }
     export type RenderUtilities = {
