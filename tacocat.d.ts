@@ -16,12 +16,15 @@ declare module "tacocat" {
         };
         id: string;
     }
+    export interface ComponentOptions extends Partial<TagOptions<any>> {
+        id?: string;
+    }
     export type RenderUtilities = {
         tag: <T extends HTMLElement>(name: string, options: Partial<TagOptions<T>>) => HTMLElement;
         text: (text: string) => Text
     }
 
-    export abstract class Component<TOptions extends Partial<TagOptions<any>> = Partial<TagOptions<HTMLElement>>> {
+    export abstract class Component<TOptions extends ComponentOptions = ComponentOptions> {
         constructor(options: Partial<TOptions>);
         componentCreated(): void;
         abstract render(renderUtils: RenderUtilities): Component | Node | Node[];
