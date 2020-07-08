@@ -30,6 +30,6 @@ declare module "tacocat" {
         protected htmlElement: TacocatComponent;
         protected options: Partial<TOptions>;
     }
-    export function render(comp: Component, target: Node): void;
+    export function render(comp: Component | Node, target: Node): void;
     export const renderUtils: RenderUtilities;
 }

@@ -81,7 +81,7 @@ export class Component {
 
 /**
  * Renders `comp` to element `target`
- * @param {Component | HTMLElement} comp Component to render
+ * @param {Component | Node} comp Component to render
  * @param {HTMLElement} target Element to render to
  */
 export function render(comp, target) {
