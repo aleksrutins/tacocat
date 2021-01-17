@@ -95,7 +95,7 @@ export function render(comp, target) {
  * Hyperscript interop
  */
 export function h(tag, props, children) {
-    if(typeof children == 'undefined') {
+    if(typeof children == 'undefined' && typeof props != 'object') {
         children = props;
         props = null;
     }
