@@ -99,6 +99,7 @@ export function h(tag, props, children) {
         children = props;
         props = null;
     }
+    children = children || [];
     let actualProps = props || {};
     if(typeof children == 'string') children = [renderUtils.text(children)];
     actualProps.children = children || [];
