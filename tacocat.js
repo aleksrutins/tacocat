@@ -95,7 +95,7 @@ export function render(comp, target) {
  * Hyperscript interop
  */
 export function h(tag, props, children) {
-    let actualProps = props;
+    let actualProps = props || {};
     actualProps.children = children || [];
     if(typeof tag == 'string') {
         return renderUtils.tag(tag, actualProps);
