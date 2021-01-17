@@ -101,7 +101,6 @@ export function h(tag, props, children) {
     if(typeof tag == 'string') {
         return renderUtils.tag(tag, actualProps);
     } else {
-        let component = new tag(actualProps);
-        return component._getNode();
+        return new tag(actualProps);
     }
 }
