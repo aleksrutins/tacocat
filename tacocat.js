@@ -1,4 +1,4 @@
-import './webcomponent.js'
+import './webcomponent.js';
 export const renderUtils = {
     tag(name, props, onCreated) {
         props = props || {};
@@ -86,8 +86,21 @@ export class Component {
  */
 export function render(comp, target) {
     if(comp instanceof Component) {
-        render(comp._getNode(), target)
+        render(comp._getNode(), target);
     } else {
         target.appendChild(comp);
+    }
+}
+/**
+ * Hyperscript interop
+ */
+export function h(tag, props, children) {
+    let actualProps = props;
+    actualProps.children = children;
+    if(typeof tag == 'string') {
+        return renderUtils.tag(tag, actualProps);
+    } else {
+        let component = new tag(actualProps);
+        return component._getNode();
     }
 }
