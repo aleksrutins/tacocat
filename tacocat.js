@@ -96,7 +96,7 @@ export function render(comp, target) {
  */
 export function h(tag, props, children) {
     let actualProps = props || {};
-    if(typeof children == 'string') children = renderUtils.text(children);
+    if(typeof children == 'string') children = [renderUtils.text(children)];
     actualProps.children = children || [];
     if(typeof tag == 'string') {
         return renderUtils.tag(tag, actualProps);
