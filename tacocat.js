@@ -99,11 +99,11 @@ export function h(tag, props, children) {
         children = props;
         props = null;
     }
+    if(typeof children == 'string') children = [renderUtils.text(children)];
     try {
         if(!(Symbol.iterator in children) || typeof children == 'undefined') children = [];
     } catch(e) {};
     let actualProps = props || {};
-    if(typeof children == 'string') children = [renderUtils.text(children)];
     actualProps.children = children || [];
     if(typeof tag == 'string') {
         return renderUtils.tag(tag, actualProps);
