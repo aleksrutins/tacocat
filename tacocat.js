@@ -100,9 +100,13 @@ export function h(tag, props, children) {
         props = null;
     }
     if(typeof children == 'string') children = [renderUtils.text(children)];
-    if(!(children instanceof Array)) children = [];
     let actualProps = props || {};
-    actualProps.children = children || [];
+    actualProps.children = [];
+    try {
+        for(let child of children) {
+            actualProps.children.push(child);
+        }
+    } catch {}
     if(typeof tag == 'string') {
         return renderUtils.tag(tag, actualProps);
     } else {
