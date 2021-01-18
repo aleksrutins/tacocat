@@ -100,9 +100,7 @@ export function h(tag, props, children) {
         props = null;
     }
     if(typeof children == 'string') children = [renderUtils.text(children)];
-    try {
-        if(!(Symbol.iterator in children) || typeof children == 'undefined') children = [];
-    } catch(e) {};
+    if(!(children instanceof Array)) children = [];
     let actualProps = props || {};
     actualProps.children = children || [];
     if(typeof tag == 'string') {
