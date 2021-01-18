@@ -99,7 +99,9 @@ export function h(tag, props, children) {
         children = props;
         props = null;
     }
-    if(!(Symbol.iterator in children) || typeof children == 'undefined') children = [];
+    try {
+        if(!(Symbol.iterator in children) || typeof children == 'undefined') children = [];
+    } catch(e) {};
     let actualProps = props || {};
     if(typeof children == 'string') children = [renderUtils.text(children)];
     actualProps.children = children || [];

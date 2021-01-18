@@ -26,5 +26,6 @@
 	"license": "GPL-3.0",
 	"types": "tacocat.d.ts",
 	"type": "module",
-	"repository": "https://github.com/munchkinhalfling/tacocat"
+	"repository": "https://github.com/munchkinhalfling/tacocat",
+	"dependencies": {}
 }
