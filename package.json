@@ -22,8 +22,8 @@
 		"website",
 		"this-package-has-too-many-tags"
 	],
-	"author": "munchkinhalfling <munchkinhalfling@pm.me>",
-	"license": "GPL-3.0",
+	"author": "Aleks Rutins <aleks@rutins.com>",
+	"license": "MIT",
 	"types": "tacocat.d.ts",
 	"type": "module",
 	"repository": "https://github.com/munchkinhalfling/tacocat",
