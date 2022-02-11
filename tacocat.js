@@ -57,8 +57,12 @@ export const renderUtils = {
 export function render(comp, target) {
     if(comp instanceof Component) {
         render(comp._getNode(), target);
-    } else if (comp instanceof Function) {
-        render(componentFromFunction(comp), target);
+    } else if(comp instanceof Array) {
+        const fragment = document.createDocumentFragment();
+        for(let child of comp) {
+            fragment.appendChild(child);
+        }
+        target.appendChild(fragment);
     } else {
         target.appendChild(comp);
     }
@@ -82,7 +86,7 @@ export function h(tag, props, children) {
     if(typeof tag == 'string') {
         return renderUtils.tag(tag, actualProps);
     } else if (typeof tag == 'function') {
-        return new (componentFromFunction(tag(actualProps)))(actualProps);
+        return new (componentFromFunction(tag))(actualProps);
     } else {
         return new tag(actualProps);
     }

@@ -43,7 +43,7 @@
 export function componentFromFunction(fn) {
     return class extends Component {
         render(utils) {
-            return fn(utils);
+            return fn(this.options, utils);
         }
     }
 }
