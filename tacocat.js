@@ -81,6 +81,8 @@ export function h(tag, props, children) {
     } catch {}
     if(typeof tag == 'string') {
         return renderUtils.tag(tag, actualProps);
+    } else if (typeof tag == 'function') {
+        return new (componentFromFunction(tag(actualProps)))(actualProps);
     } else {
         return new tag(actualProps);
     }
