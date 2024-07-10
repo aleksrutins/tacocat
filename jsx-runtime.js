@@ -1,1 +1,1 @@
-export { h } from './tacocat.js'
+export { h, h as jsx } from './tacocat.js'
