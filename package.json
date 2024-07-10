@@ -6,7 +6,8 @@
 	"exports": {
 		".": "./tacocat.js",
 		"./webcomponent": "./webcomponent.js",
-		"./jsx-runtime": "./jsx-runtime.js"
+		"./jsx-runtime": "./jsx-runtime.js",
+		"./jsx-dev-runtime": "./jsx-runtime.js"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"

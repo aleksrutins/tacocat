@@ -6,7 +6,12 @@ declare module "tacocat/webcomponent" {
 }
 declare module "tacocat/jsx-runtime" {
     export function h(tag: string | Function, props: any, children: any | null | undefined): Node;
-    export const jsx: typeof h
+    export const jsx: typeof h;
+}
+declare module "tacocat/jsx-dev-runtime" {
+    export const h: typeof import('tacocat/jsx-runtime').h;
+    export const jsx: typeof h;
+    export const jsxDEV: typeof h;
 }
 declare module "tacocat" {
     import {TacocatComponent} from 'tacocat/webcomponent';
