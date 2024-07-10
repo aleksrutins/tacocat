@@ -1,31 +1,23 @@
 {
 	"name": "tacocat",
 	"version": "3.2.0",
-	"description": "The only palindromic web components library",
+	"description": "The palindromic web components library",
 	"main": "tacocat.js",
 	"exports": {
-		"default": "./tacocat.js"
+		".": "./tacocat.js",
+		"./webcomponent": "./webcomponent.js",
+		"./jsx-runtime": "./jsx-runtime.js"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [
-		"tacocat-spelled-backwards-is-tacocat",
-		"web",
-		"components",
-		"reusable",
-		"fast",
-		"client-side",
-		"palindrome",
-		"tacocat",
-		"webcomponents",
-		"website",
-		"this-package-has-too-many-tags"
+		"webcomponents"
 	],
 	"author": "Aleks Rutins <aleks@rutins.com>",
 	"license": "MIT",
 	"types": "tacocat.d.ts",
 	"type": "module",
-	"repository": "https://github.com/munchkinhalfling/tacocat",
+	"repository": "https://github.com/aleksrutins/tacocat",
 	"dependencies": {}
 }
