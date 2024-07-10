@@ -4,6 +4,9 @@ declare module "tacocat/webcomponent" {
         public loadComponent(component: Component, renderUtls: RenderUtilities, renderFunc: typeof render): void;
     }
 }
+declare module "tacocat/jsx-runtime" {
+    export function h(tag: string | Function, props: any, children: any | null | undefined): Node;
+}
 declare module "tacocat" {
     import {TacocatComponent} from 'tacocat/webcomponent';
     export interface TagOptions<TTag> extends Partial<Omit<HTMLElement, 'attributes' | 'children' | 'style'>> {
