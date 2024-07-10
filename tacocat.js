@@ -1,7 +1,8 @@
 import { componentFromFunction } from './component.js';
 import './webcomponent.js';
 
-export { Component } from './component.js';
+import { Component } from './component.js';
+export { Component };
 
 /**
  * @typedef {Node | Component | FunctionComponent} ComponentType
