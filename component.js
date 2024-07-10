@@ -1,3 +1,5 @@
+import { renderUtils } from "./render-utils.js";
+
 /**
  * Base class for reusable components.
  * DO NOT override constructor(). Instead use componentCreated().
