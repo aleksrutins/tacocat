@@ -1,4 +1,5 @@
 import { renderUtils } from "./render-utils.js";
+import { render } from "./tacocat.js";
 
 /**
  * Base class for reusable components.
