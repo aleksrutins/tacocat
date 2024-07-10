@@ -1,3 +1,5 @@
+import { render } from "./tacocat";
+
 /**
  * @typedef {Node | Component | FunctionComponent} ComponentType
  * @typedef {ComponentType | Array<ComponentType>} RenderResult
